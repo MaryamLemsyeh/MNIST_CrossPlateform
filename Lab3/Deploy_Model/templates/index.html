@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <title>Title</title>
+</head>
+<body>
+    <h1>Fashion MNIST Model</h1>
+    <form action = "/" method = "POST"
+         enctype = "multipart/form-data">
+        <dl>
+            <p>
+                <input type = "file" name = "file" class="form-control" />
+            </p>
+        </dl>
+        <p>
+            <input type = "submit" value="upload" class="btn btn-info"/>
+        </p>
+    </form>
+        {% if imagePath %}
+        <img src="../static/uploads/{{imagePath}}" width="50%" height="50%" style="margin-top:30px">
+        <p>Result object = {{pred}}</p>
+        {% endif %}
+
+</body>
+</html>
